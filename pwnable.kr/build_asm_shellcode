@@ -1,0 +1,7 @@
+#!/bin/bash
+
+nasm -felf64 $1.s && ld $1.o -o $1
+
+./shell2hex $1 > $1.hex
+
+cat $1.hex | tr -d '\\\x' | xxd -r -p > $1.raw

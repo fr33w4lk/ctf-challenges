@@ -1,0 +1,51 @@
+[----------------------------------registers-----------------------------------]
+RAX: 0x7ffd90778f30 ("cat: password: Permission denied\n")
+RBX: 0x0 
+RCX: 0x6e6f697373696d72 ('rmission')
+RDX: 0x7fd59db4e790 --> 0x0 
+RSI: 0x7ffd90778f30 ("cat: password: Permission denied\n")
+RDI: 0x6010a0 ("cat: password: Permission denied\n")
+RBP: 0x7ffd90778fa0 --> 0x4008c0 (<__libc_csu_init>:    push   r15)
+RSP: 0x7ffd90778f20 --> 0x1 
+RIP: 0x400868 (<main+110>:      call   0x400650 <strcmp@plt>)
+R8 : 0x9be681 --> 0x0 
+R9 : 0x7fd59dd69700 (0x00007fd59dd69700)
+R10: 0x7fd59dd69700 (0x00007fd59dd69700)
+R11: 0x246 
+R12: 0x400690 (<_start>:        xor    ebp,ebp)
+R13: 0x7ffd90779080 --> 0x1 
+R14: 0x0 
+R15: 0x0
+EFLAGS: 0x246 (carry PARITY adjust ZERO sign trap INTERRUPT direction overflow)
+[-------------------------------------code-------------------------------------]
+   0x40085c <main+98>:  lea    rax,[rbp-0x70]
+   0x400860 <main+102>: mov    rsi,rax
+   0x400863 <main+105>: mov    edi,0x6010a0
+=> 0x400868 <main+110>: call   0x400650 <strcmp@plt>
+   0x40086d <main+115>: test   eax,eax
+   0x40086f <main+117>: jne    0x4008a0 <main+166>
+   0x400871 <main+119>: mov    edi,0x400996
+   0x400876 <main+124>: mov    eax,0x0
+Guessed arguments:
+arg[0]: 0x6010a0 ("cat: password: Permission denied\n")
+arg[1]: 0x7ffd90778f30 ("cat: password: Permission denied\n")
+[------------------------------------stack-------------------------------------]
+0000| 0x7ffd90778f20 --> 0x1 
+0008| 0x7ffd90778f28 --> 0x9bd010 --> 0xfbad2488 
+0016| 0x7ffd90778f30 ("cat: password: Permission denied\n")
+0024| 0x7ffd90778f38 ("sword: Permission denied\n")
+0032| 0x7ffd90778f40 ("ermission denied\n")
+0040| 0x7ffd90778f48 ("n denied\n")
+0048| 0x7ffd90778f50 --> 0xff00000a 
+0056| 0x7ffd90778f58 --> 0x0 
+[------------------------------------------------------------------------------]
+Legend: code, data, rodata, value
+
+Breakpoint 1, 0x0000000000400868 in main ()
+gdb-peda$ c
+Continuing.
+congrats! here is your flag: Pl3as_DonT_Miss_youR_GrouP_Perm!!
+[Inferior 1 (process 51542) exited normally]
+Warning: not running or target is remote
+gdb-peda$ 
+

